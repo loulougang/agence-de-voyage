@@ -1,0 +1,840 @@
+  @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+  * {
+    margin: 0;
+    padding: 0;
+
+  }
+
+  body {
+    max-width: 1400px;
+    margin: auto;
+    font-family: 'Raleway', sans-serif;
+  }
+
+  .ElementFiltre i,
+  .LogementDispo i,
+  .cardNote i,
+  .TitreContainerPopulaires i,
+  .cardNoteAside i {
+    color: #0065FC;
+  }
+
+  /* ********************************************************************************************************************************* */
+  /* ****************************************************** NAVBAR ***************************************************************** */
+
+  nav {
+    width: 100%;
+    height: auto;
+    padding: 44px 0px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .logo img {
+    padding: 0px 23px;
+  }
+
+  .menuNav ul {
+    display: flex;
+
+  }
+
+  .menuNav ul li {
+    padding: 0px 23px;
+    list-style: none;
+  }
+
+  .menuNav ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 44px 0px;
+    position: relative;
+
+  }
+
+  .menuNav ul li a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #0065FC;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: .5s;
+
+  }
+
+  .menuNav ul li a:hover::before {
+    transform: scaleX(1);
+  }
+
+  .menuNav ul li a:hover {
+    color: #0065FC;
+
+  }
+
+  /* ********************************************************************************************************************************* */
+  /* ****************************************************** HEADER ***************************************************************** */
+
+  header {
+    width: 100%;
+    height: auto;
+    padding: 15px 0px 35px 0px;
+  }
+
+  header h1,
+  header p {
+    padding: 0px 23px;
+  }
+
+  header h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 32px;
+  }
+
+  header p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    /* line-height: 19px; */
+    margin: 8px 0px 35px 0px;
+  }
+
+  form {
+    background-color: #F2F2F2;
+    /*   width: 27.5%; */
+    width: 393px;
+    overflow: hidden;
+    border: 1px solid #F2F2F2;
+    border-radius: 15px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 23px;
+  }
+
+  .inputSearch {
+    padding: 0px 10px;
+    height: 50px;
+    outline: none;
+    width: 62%;
+    background: #FFFFFF;
+    border: 1px solid #F2F2F2;
+
+  }
+
+  .fa-location-dot {
+    font-weight: 900;
+    padding: 15px 20px;
+    background: #F2F2F2;
+    border: 1px solid #F2F2F2;
+    border-radius: 15px 0px 0px 15px;
+  }
+
+  .btnRechercherSearch,
+  .iconBtnSearchMobile {
+    background-color: #0065FC;
+    color: white;
+    border: none;
+    outline: none;
+    padding: 15px 20px;
+    border: 1px solid #0065FC;
+    border-radius: 0px 15px 15px 0px;
+  }
+
+  .iconBtnSearchMobile {
+    display: none;
+  }
+
+  /* ********************************************************************************************************************************* */
+  /* ************************************* MAIN -> SECTION UNE -> FILTRE ************************************************************* */
+
+
+
+  .FiltreSectionUne {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 0px 23px;
+  }
+
+  .containerFiltreSectionUne {
+    display: flex;
+    gap: 24px;
+    height: auto;
+
+  }
+
+  .ElementFiltre {
+    display: flex;
+    border: 2px solid #D9D9D9;
+    padding: 4px 19px;
+    border-radius: 25px;
+    gap: 10px;
+    align-items: center;
+    height: 35px;
+  }
+
+
+  .FiltreSectionUne h1,
+  .ElementFiltre h3 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    color: #000000;
+  }
+
+
+
+  .ElementFiltre:hover {
+    background-color: #DEEBFF;
+    transition-delay: .1s;
+    transition-duration: .7s;
+    cursor: pointer;
+
+  }
+
+  .ElementFiltre:first-child {
+    width: 140px;
+  }
+
+  .ElementFiltre:nth-child(2) {
+    width: 90px;
+  }
+
+  .ElementFiltre:nth-child(3) {
+    width: 135px;
+  }
+
+  .ElementFiltre:last-child {
+    width: 190px;
+  }
+
+  /* ********************************************************************************************************************************* */
+  /* ********************************** MAIN -> SECTION UNE -> (I) LOGEMENTS DISPO ***************************************************** */
+
+  .LogementDispo {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 35px 23px;
+  }
+
+  .LogementDispo i {
+    font-size: 12px;
+  }
+
+  .LogementDispo i {
+    border: 1px solid #D9D9D9;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  /* ********************************************************************************************************************************* */
+  /* ********************************** MAIN -> SECTION UNE -> HÉBERGEMENTS - POPULAIRES ********************************************************** */
+
+  .ContainerToutLesLogementDisponible,
+  .containerActivite {
+    gap: 30px;
+    display: flex;
+    margin-top: 20px;
+    padding: 0px 23px;
+  }
+
+  /* ********************************************************************************************************************************* */
+  /* ********************************** MAIN -> SECTION UNE -> HÉBERGEMENTS ********************************************************** */
+
+
+
+  .containerHebergement {
+    background-color: #F2F2F2;
+    /* padding: 40px 0px; */
+    width: 65%;
+    height: 100%;
+    /* padding: 120Px 0px; */
+    border-radius: 20px;
+  }
+
+
+  .containerHebergement h2,
+  #SectionDeux h2 {
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: bolder;
+    padding: 42px 0px 23px 40px;
+  }
+
+  .ElementCard {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .containerHebergementCard {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: center;
+    gap: 16px;
+    padding: 0px 40px;
+  }
+
+  .card {
+    height: 199px;
+    width: 32%;
+    overflow: hidden;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0px 3px 11px #d9d9d9;
+  }
+
+  .cardImg {
+    overflow: hidden;
+    height: 57.3%;
+    border: 5px solid #FFFFFF;
+
+  }
+
+  .cardImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px 20px 0px 0px;
+  }
+
+  .cardInfo h3,
+  .cardInfoAside h3 {
+    font-weight: 700;
+    font-size: 14.45px;
+    padding-bottom: 4px;
+  }
+
+  .cardInfo p,
+  .cardInfoAside p {
+    font-weight: 400;
+    font-size: 12.5px;
+    padding-bottom: 4px;
+  }
+
+  .cardNote i,
+  .cardNoteAside i {
+    font-size: 12px;
+  }
+
+  .cardNote .five,
+  .cardNoteAside .five {
+    color: #F2F2F2;
+  }
+
+
+  .containerCardInfo {
+    padding: 4px 0px 0px 13px;
+  }
+
+
+  .affiche_Plus {
+    padding: 25px 0px;
+    width: 100%;
+  }
+
+  /* ********************************************************************************************************************************* */
+  /* ********************************** MAIN -> SECTION UNE -> POPULAIRES ********************************************************** */
+
+
+
+  .containerPopulaires {
+    width: 32%;
+    /* padding: 40px 0px; */
+    background-color: #F2F2F2;
+    border-radius: 20px;
+
+  }
+
+  .containerPopulairesCard {
+    width: 100%;
+    align-items: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+  }
+
+  .TitreContainerPopulaires h2 {
+    font-weight: 700;
+    font-size: 22px;
+  }
+
+  .TitreContainerPopulaires {
+    display: flex;
+    justify-content: space-between;
+    padding: 42px 25px 23px 25px;
+  }
+
+  .cardAside {
+    height: 144px;
+    width: 85%;
+    overflow: hidden;
+    display: flex;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0px 3px 11px #d9d9d9;
+  }
+
+  .cardImgAside {
+    border: 5px solid #FFFFFF;
+  }
+
+  .cardImgAside img {
+    height: 134px;
+    width: 137px;
+    object-fit: cover;
+    border-radius: 20px 0px 0px 20px;
+  }
+
+  .cardInfoAside {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 100%;
+  }
+
+  .cardInfoAside p {
+    padding-top: 5px;
+  }
+
+  .containerCardInfoAside {
+    padding: 13px 8px;
+    display: flex;
+    /* height: 137px; */
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
+
+  /* ********************************************************************************************************************************* */
+  /* ********************************** MAIN -> SECTION DEUX -> ACTIVITÉ À MARSEILLE ********************************************************** */
+
+
+  #SectionDeux {
+    padding: 0px 0px 60px 0px;
+  }
+
+  .StyleCardActivite {
+    height: 444.51px;
+  }
+
+  .StyleCardImgActivite {
+    height: 85%;
+  }
+
+  #SectionDeux h2 {
+    padding: 42px 0px 23px 23px;
+  }
+
+  .StyleCardImgActivite {
+    border: none;
+  }
+
+  .StyleCardInfoActivite h3 {
+    padding: 20px 0px;
+  }
+
+  /* ********************************************************************************************************************************* */
+  /* *************************************************** FOOTER ********************************************************************** */
+
+  footer {
+    display: flex;
+    justify-content: center;
+  }
+
+  .containerFooter {
+    display: flex;
+    width: 95%;
+    height: 225px;
+    gap: 150px;
+    background-color: #F2F2F2;
+  }
+
+  .elementFooter1 {
+    margin-left: 60px;
+  }
+
+  .menuFooter {
+    margin-top: 45px;
+  }
+
+  .menuFooter ul li {
+    list-style: none;
+    margin-bottom: 12px;
+    font-size: 16px;
+  }
+
+  .menuFooter h2 {
+    margin-bottom: 20px;
+    font-weight: 900;
+    font-size: 18px;
+  }
+
+  @media screen and (max-width:992px) {
+
+
+    /* ********************************************************************************************************************************* */
+    /* ****************************************************** HEADER ***************************************************************** */
+
+
+    form {
+      width: 413px;
+    }
+
+    /* ********************************************************************************************************************************* */
+    /* ************************************* MAIN -> SECTION UNE -> FILTRE ************************************************************* */
+
+
+    .FiltreSectionUne {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+
+    .ElementFiltre h3 {
+      font-size: 16px;
+    }
+
+    .containerFiltreSectionUne {
+      gap: 20px;
+    }
+
+    .ElementFiltre:first-child {
+      width: 130px;
+    }
+
+    .ElementFiltre:nth-child(2) {
+      width: 80px;
+    }
+
+    .ElementFiltre:nth-child(3) {
+      width: 120px;
+    }
+
+    .ElementFiltre:last-child {
+      width: 175px;
+    }
+
+    /* ********************************************************************************************************************************* */
+    /* ********************************** MAIN -> SECTION UNE -> HÉBERGEMENTS - POPULAIRES ********************************************************** */
+
+    .containerHebergement {
+      width: 100%;
+    }
+
+    .ContainerToutLesLogementDisponible {
+      flex-direction: column;
+    }
+
+    .containerPopulaires {
+      width: 100%;
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .containerPopulairesCard {
+      width: 90%;
+      height: 100%;
+      padding: 0px 0px 25px 0px;
+      flex-direction: row;
+    }
+
+    .TitreContainerPopulaires {
+      width: 90%;
+    }
+
+    .cardInfoAside h3 {
+      font-size: 13.25px;
+    }
+
+    .cardInfo p,
+    .cardInfoAside p {
+      font-size: 11.5px;
+    }
+
+    .cardImgAside img {
+      height: 114px;
+      width: 87px;
+    }
+
+    .cardAside {
+      height: 124px;
+      width: 85%;
+    }
+
+    /* ********************************************************************************************************************************* */
+    /* ********************************** MAIN -> SECTION DEUX -> ACTIVITÉ À MARSEILLE ********************************************************** */
+
+    .StyleCardActivite {
+      height: 267px;
+    }
+
+    .StyleCardImgActivite {
+      height: 75%;
+    }
+
+    /* ********************************************************************************************************************************* */
+    /* *************************************************** FOOTER ********************************************************************** */
+
+    .containerFooter {
+      width: 94%;
+      gap: 70px;
+    }
+  }
+
+
+
+  @media screen and (max-width :768px) {
+
+    /* ********************************************************************************************************************************* */
+    /* ****************************************************** HEADER ***************************************************************** */
+
+
+    .btnRechercherSearch {
+      display: none;
+    }
+
+    .iconBtnSearchMobile {
+      display: block;
+    }
+
+    .inputSearch {
+      width: 70%;
+    }
+
+    form {
+      width: 290px;
+    }
+
+    /* ********************************************************************************************************************************* */
+    /* ****************************************************** NAVBAR ***************************************************************** */
+
+    nav {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 30px 0px;
+    }
+
+    .menuNav {
+      width: 100%;
+    }
+
+    .menuNav ul {
+      width: 100%;
+      justify-content: space-around;
+    }
+
+    .menuNav ul li a {
+      display: block;
+      padding: 0px 0px 15px 0px;
+    }
+
+    .menuNav ul li {
+      padding: initial;
+      width: 50%;
+      text-align: center;
+    }
+
+    .logo {
+      margin-bottom: 8%;
+    }
+
+    .menuNav ul li a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #0065FC;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: .5s;
+
+    }
+
+    .menuNav ul li:nth-child(2) a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #0065FC;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: .5s;
+
+    }
+
+    .menuNav ul li a:hover::after,
+    .menuNav ul li a:nth-child(2):hover::after {
+      transform: scaleX(1);
+    }
+
+    .menuNav ul li a::before {
+      content: none;
+    }
+
+    /* ********************************************************************************************************************************* */
+    /* ****************************************************** HEADER ***************************************************************** */
+
+
+    header {
+      padding: 0px 0px 35px 0px;
+    }
+
+
+
+    /* ********************************************************************************************************************************* */
+    /* ************************************* MAIN -> SECTION UNE -> FILTRE ************************************************************* */
+
+    .containerFiltreSectionUne {
+      /*  width: 410px; */
+      flex-wrap: wrap;
+    }
+
+    .ElementFiltre h3 {
+      font-size: 13px;
+    }
+
+    .containerFiltreSectionUne {
+      gap: 10px;
+    }
+
+    .ElementFiltre:first-child {
+      width: 105px;
+    }
+
+    .ElementFiltre:nth-child(2) {
+      width: 66px;
+    }
+
+    .ElementFiltre:nth-child(3) {
+      width: 100px;
+    }
+
+    .ElementFiltre:last-child {
+      width: 139px;
+    }
+
+    /* ********************************************************************************************************************************* */
+    /* ********************************** MAIN -> SECTION UNE -> HÉBERGEMENTS - POPULAIRES ********************************************************** */
+
+
+
+    .ContainerToutLesLogementDisponible {
+      flex-direction: column-reverse;
+      padding: 0px 0px;
+    }
+
+    .containerPopulairesCard {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .containerHebergementCard {
+      padding: 0px 15px;
+    }
+
+    .cardAside {
+      width: 100%;
+    }
+
+    .containerHebergement {
+      background: none;
+    }
+
+    .ElementCard {
+      flex-direction: column;
+      gap: 35px;
+    }
+
+    .card {
+      width: 100%;
+      height: 200px;
+    }
+
+    .TitreContainerPopulaires {
+      width: 90%;
+      padding: 42px 0px 23px 0px;
+    }
+
+    .cardImgAside img {
+      height: 114px;
+      width: 127px;
+    }
+
+    .cardInfoAside h3 {
+      font-size: 15.25px;
+    }
+
+    .containerPopulaires {
+      border-radius: 0px;
+    }
+
+    .containerHebergement h2 {
+      padding: 10px 0px 23px 15px;
+    }
+
+    .affiche_Plus {
+      display: none;
+    }
+
+    /* ********************************************************************************************************************************* */
+    /* ********************************** MAIN -> SECTION DEUX -> ACTIVITÉ À MARSEILLE ********************************************************** */
+
+    .containerActivite {
+      flex-direction: column;
+    }
+
+    .StyleCardInfoActivite h3 {
+      padding: 12px 0px;
+    }
+
+    /* ********************************************************************************************************************************* */
+    /* *************************************************** FOOTER ********************************************************************** */
+
+    .containerFooter {
+      width: 100%;
+      gap: 25px;
+      height: 100%;
+      /* flex-wrap: wrap; */
+      flex-direction: column;
+    }
+
+    .menuFooter {
+      margin-left: 30px;
+      margin-top: 45px;
+    }
+
+    .elementFooter1 {
+      margin-top: 45px;
+    }
+
+    .elementFooter3 {
+      margin-bottom: 45px;
+    }
+  }
